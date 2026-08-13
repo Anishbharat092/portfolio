@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Environment variables (Keeps your Resend API keys secret!)
+.env*.local
+
+# Operating system & IDE junk
+.DS_Store
+.vscode/
+.idea/
+
+# Deployment & debug logs
+.vercel/
+npm-debug.log*
+yarn-debug.log*
