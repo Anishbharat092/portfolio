@@ -12,11 +12,21 @@ interface Project {
   category: string
   stack: string[]
   features: string
+  githubUrl?: string
 }
 
 const projects: Project[] = [
   {
     index: '01',
+    title: 'AI Code Reviewer',
+    category: 'Full-Stack & AI Systems',
+    stack: ['Next.js', 'NestJS', 'BullMQ', 'Redis', 'Gemini API', 'Tailwind CSS'],
+    features:
+      'Full-stack platform for automated GitHub PR reviews — async AI evaluation pipeline built with NestJS, BullMQ, and Gemini API.',
+    githubUrl: 'https://github.com/Anishbharat092/ai-code-review-tool',
+  },
+  {
+    index: '02',
     title: 'Whisprai',
     category: 'Full-Stack & AI Integration',
     stack: ['Next.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Tailwind CSS'],
@@ -24,20 +34,12 @@ const projects: Project[] = [
       'Built a full-stack platform with custom REST APIs and JWT auth. Optimized backend query execution and payload structures, cutting API response time by 30%.',
   },
   {
-    index: '02',
+    index: '03',
     title: 'Swift Book',
     category: 'Full-Stack Booking Engine',
     stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
     features:
       'Engineered listing management REST APIs, user authentication, and schema designs to handle property bookings efficiently.',
-  },
-  {
-    index: '03',
-    title: 'Amazon Clone',
-    category: 'Frontend UI Engineering',
-    stack: ['HTML5', 'CSS3', 'JavaScript (ES6+)'],
-    features:
-      'Built a responsive e-commerce web interface with dynamic client-side filtering and an interactive shopping cart system.',
   },
 ]
 
@@ -60,7 +62,6 @@ function ProjectCard({ project, index, total }: { project: Project; index: numbe
 
   // 2. 3D Unfolding Tilt (Tilts 16deg back on entry, levels flat, and reacts to scroll speed)
   const entryRotateX = useTransform(scrollYProgress, [0, 0.7], [16, 0])
-  const velocityRotateX = useTransform(smoothVelocity, [-1, 1], [6, -8])
 
   // 3. Z-Plane Depth Push (Pushes back -80px into screen on entry)
   const zDepth = useTransform(scrollYProgress, [0, 0.7], [-80, 0])
@@ -84,7 +85,7 @@ function ProjectCard({ project, index, total }: { project: Project; index: numbe
         }}
         className="group relative overflow-hidden rounded-3xl border border-white/20 bg-[#121216]/90 p-6 sm:p-8 md:p-10 backdrop-blur-2xl shadow-[0_30px_70px_rgba(0,0,0,0.85)] space-y-8 transition-colors duration-500 hover:border-purple-500/50 hover:shadow-[0_30px_70px_rgba(168,85,247,0.18)]"
       >
-        {/* Dynamic Light Sheen Glare (Sweeps across card on scroll) */}
+        {/* Dynamic Light Sheen Glare */}
         <motion.div
           style={{ x: sheenX }}
           className="pointer-events-none absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/[0.08] to-transparent"
@@ -108,7 +109,7 @@ function ProjectCard({ project, index, total }: { project: Project; index: numbe
               </h3>
             </div>
           </div>
-          <SourceButton />
+          <SourceButton href={project.githubUrl} />
         </div>
 
         {/* Bottom Details Row */}
@@ -128,7 +129,6 @@ function ProjectCard({ project, index, total }: { project: Project; index: numbe
           </div>
           <div>
             <p className="text-xs font-mono tracking-wider text-zinc-500 uppercase mb-2">Core Features</p>
-            {/* Smooth 3D Word Reveal for Core Features */}
             <ScrollTextReveal
               text={project.features}
               className="text-sm sm:text-base font-light leading-relaxed text-zinc-300"
