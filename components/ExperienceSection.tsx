@@ -59,7 +59,7 @@ const experiences: Experience[] = [
   {
     role: 'Full Stack Engineer',
     company: 'Vitaris Air Ambulance Services Pvt Ltd',
-    location: 'Sole Engineer',
+    location: 'Remote',
     period: 'OCT 2025 – APR 2026',
     isCurrent: false,
     deliverables: [
