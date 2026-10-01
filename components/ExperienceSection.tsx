@@ -57,33 +57,33 @@ const experiences: Experience[] = [
     ],
   },
   {
-    role: 'Full Stack Engineer',
-    company: 'Vitaris Air Ambulance Services Pvt Ltd',
-    location: 'Remote',
-    period: 'OCT 2025 – APR 2026',
-    isCurrent: false,
-    deliverables: [
-      {
-        title: 'End-to-End Dispatch Platform',
-        body: 'Architected and built a patient booking and dispatch management platform end-to-end as the sole engineer, managing booking requests, patient records, and real-time tracking across air, train, and road ambulance operations.',
-        tags: ['Full Stack', 'Node.js', 'Express.js', 'MongoDB', 'React.js'],
-      },
-      {
-        title: 'Operations Admin Dashboard',
-        body: 'Engineered a centralized dashboard enabling operations staff to triage incoming medical requests, assign transport assets, and trace patient journeys from initial intake through final handover.',
-        tags: ['Admin Portal', 'Resource Dispatch', 'Workflow Management', 'React'],
-      },
-      {
-        title: 'Secure Patient & Transport Records',
-        body: 'Modeled database schemas and built backend REST APIs to manage sensitive patient intake records, operational logs, and multi-tier ambulance dispatch workflows.',
-        tags: ['RESTful APIs', 'Database Design', 'Data Integrity', 'CRUD'],
-      },
-      {
-        title: 'Complete SDLC & Founder Collaboration',
-        body: 'Owned the full product development lifecycle directly with company founders and operational teams, translating frontline clinical transport requirements into a live production system.',
-        tags: ['System Design', 'Agile', 'Requirements Gathering', 'Production Deployment'],
-      },
-    ],
+  role: 'Software Engineer',
+  company: 'Vitaris Air Ambulance Services Pvt Ltd',
+  location: 'Remote',
+  period: 'OCT 2025 – APR 2026',
+  isCurrent: false,
+  deliverables: [
+    {
+      title: 'Dispatch & Logistics Platform',
+      body: 'Engineered core features for a real-time booking and dispatch management platform, streamlining transport tracking, patient records, and transit coordination across air, train, and road medical operations.',
+      tags: ['Full Stack', 'Node.js', 'Express.js', 'MongoDB', 'React.js'],
+    },
+    {
+      title: 'Operations Admin Dashboard',
+      body: 'Developed an interactive operations dashboard using React.js, enabling dispatch teams to triage incoming transport requests, allocate resources, and track status lifecycles from intake to handover.',
+      tags: ['React.js', 'State Management', 'Workflow Automation', 'UI/UX'],
+    },
+    {
+      title: 'Secure Backend & RESTful APIs',
+      body: 'Designed scalable MongoDB schemas and implemented modular REST endpoints to ensure data integrity, role-based access, and reliable handling of critical patient transit logs.',
+      tags: ['RESTful APIs', 'Database Design', 'Data Security', 'Backend'],
+    },
+    {
+      title: 'Production Reliability & Deployment',
+      body: 'Collaborated closely with cross-functional teams to translate operational requirements into production-ready software, managing database operations, bug triage, and continuous system maintenance.',
+      tags: ['System Maintenance', 'Production Support', 'Docker', 'API Integration'],
+    },
+  ],
   },
 ]
 

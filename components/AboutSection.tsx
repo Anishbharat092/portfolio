@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ShieldCheck, Cpu, Database, Server } from 'lucide-react'
+import { Terminal, Cpu, Database, Server } from 'lucide-react'
 import ContactButton from './ui/ContactButton'
 import Cursor3DCanvas from './ui/Cursor3DCanvas'
 import ScrollTextReveal from './ui/ScrollTextReveal'
@@ -26,7 +26,7 @@ export default function AboutSection() {
     <section
       id="about"
       className="relative flex min-h-screen flex-col items-center justify-center px-6 py-28 sm:px-10 md:px-16 overflow-hidden bg-[#0A0A0C] text-zinc-100"
-      style={{ perspective: '1200px' }} // Enables 3D perspective viewport
+      style={{ perspective: '1200px' }}
     >
       {/* 3D Cursor Background */}
       <Cursor3DCanvas />
@@ -70,12 +70,12 @@ export default function AboutSection() {
             {/* Word-by-Word Scroll Reveals */}
             <div className="space-y-6 relative z-10">
               <ScrollTextReveal
-                text="I am a Full-Stack Software Engineer with a heavy backend focus and a specialization in Cybersecurity. I engineer production REST APIs, multi-state backend workflows, and rate-limited authorization systems."
+                text="I am a Backend and Full-Stack Software Engineer focused on reliable backend systems, containerized workflows, and applied AI integration. I engineer production REST APIs, complex multi-state workflows, and secure authentication systems built for scale."
                 className="text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-zinc-100"
               />
 
               <ScrollTextReveal
-                text="Utilizing Node.js, Express, NestJS, TypeScript, React, and MongoDB, I have a proven track record of cutting API latency by up to 30% and building zero-data-loss OAuth integrations."
+                text="Working primarily across Node.js, NestJS, TypeScript, React, and MongoDB, I architect asynchronous task pipelines with Redis and BullMQ, containerize services using Docker, and build robust GenAI API integrations with zero data loss."
                 className="text-base sm:text-lg md:text-xl font-light leading-relaxed text-zinc-300"
               />
             </div>
@@ -87,16 +87,16 @@ export default function AboutSection() {
                 <span>Backend Architecture</span>
               </div>
               <div className="flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.02] p-3 backdrop-blur-sm group-hover:border-emerald-500/20 transition-colors">
-                <ShieldCheck className="h-4 w-4 text-emerald-400" />
-                <span>Cybersecurity & Auth</span>
+                <Terminal className="h-4 w-4 text-emerald-400" />
+                <span>Docker & CI/CD</span>
               </div>
               <div className="flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.02] p-3 backdrop-blur-sm group-hover:border-indigo-500/20 transition-colors">
                 <Cpu className="h-4 w-4 text-indigo-400" />
-                <span>Distributed Systems</span>
+                <span>Async Queues & LLM APIs</span>
               </div>
               <div className="flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.02] p-3 backdrop-blur-sm group-hover:border-cyan-500/20 transition-colors">
                 <Database className="h-4 w-4 text-cyan-400" />
-                <span>MongoDB & Caching</span>
+                <span>MongoDB & Redis</span>
               </div>
             </div>
           </motion.div>
